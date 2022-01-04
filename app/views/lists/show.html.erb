@@ -1,0 +1,9 @@
+<h1>Et voici les films de la liste: "<%= @list.name %>"</h1>
+<br><br>
+<ul>
+  <% @movies.each do |item| %>
+  <li><%= item.title%> </li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Add a movie to this list",  new_list_bookmark_path(@list) %>
