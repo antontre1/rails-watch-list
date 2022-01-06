@@ -1,0 +1,51 @@
+.container {
+  width: 80%;
+}
+
+
+.list-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.list-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+  min-width: 215px;
+  margin: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.list-img {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.link, .link:hover {
+  position: absolute;
+  right: 10px;
+  top: 150px;
+  opacity: 0.8;
+  text-align:center;
+  text-decoration: none;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  border: blue 1px solid;
+  border-radius: 4px;
+  background-color: rgb(132, 132, 214);
+  color: white;
+  margin: 5px;
+  width: 180px;
+
+}

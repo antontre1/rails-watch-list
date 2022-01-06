@@ -1,6 +1,15 @@
-<h1>Les Listes</h1>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1563381013529-1c922c80ac8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80);">
+  <div class="container">
+    <h1><strong>Les Listes </strong>!</h1>
+    <p>Gardez vos listes de films préférés sous la main</p><br>
+    <%= link_to "Créer une liste",  new_list_path, class: 'btn btn-primary'  %>
+  </div>
+</div>
+  <div class="list-container">
   <% @lists.each do |list|%>
-  <li><%= link_to list.name, list_path(list) %></li>
+    <div class="list-card">
+      <img src= <%=  (image_url list.url) if (list.url)  %> <%= ("https://images.unsplash.com/photo-1551124054-0324fbd83227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80%") if (!list.url) %> class='list-img'>
+      <%= link_to list.name, list_path(list), class: 'link' %>
+    </div>
   <% end %>
-</ul>
+  </div>

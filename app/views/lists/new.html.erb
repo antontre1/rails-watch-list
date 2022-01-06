@@ -1,4 +1,9 @@
-<%= form_with model: @list do |form| %>
+<%= form_with(model: @list, html: { class: "form-list" }) do |form| %>
+  <%= form.label :name, "Quel est le nom de cette nouvelle liste?" %>
   <%= form.text_field :name %>
-  <%= form.submit %>
+  <br>
+  <%= form.label :url, "Avez vous une URL d'image?" %>
+  <%= form.text_field :url %>
+  <br>
+  <%= form.submit "Valider" %>
 <% end %>
