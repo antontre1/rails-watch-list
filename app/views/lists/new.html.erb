@@ -1,3 +1,7 @@
+<h1>Ajouter votre nouvelle liste</h1>
+<%= cl_image_tag "fiwzmrcltvicvf8dtgxa", alt: "une image", width: 400, height: 300, crop: :fill %>
+
+
 <%= form_with(model: @list, html: { class: "form-list" }) do |form| %>
   <%= form.label :name, "Quel est le nom de cette nouvelle liste?" %>
   <%= form.text_field :name %>
@@ -5,5 +9,7 @@
   <%= form.label :url, "Avez vous une URL d'image?" %>
   <%= form.text_field :url %>
   <br>
+  <%= form.label :photo, "Avez vous une image à uploader?" %>
+  <%= form.file_field :photo %>
   <%= form.submit "Valider" %>
 <% end %>

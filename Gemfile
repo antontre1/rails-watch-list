@@ -52,3 +52,5 @@ gem 'rails-controller-testing', group: [ :test ]
 
 # added for the deployment
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
+gem 'devise'

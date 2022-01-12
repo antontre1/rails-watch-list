@@ -10,6 +10,7 @@
     <div class="list-card">
       <img src= <%=  (image_url list.url) if (list.url)  %> <%= ("https://images.unsplash.com/photo-1551124054-0324fbd83227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80%") if (!list.url) %> class='list-img'>
       <%= link_to list.name, list_path(list), class: 'link' %>
+      <%= link_to "delete", list_path(list), class: 'link-del'%>
     </div>
   <% end %>
   </div>
