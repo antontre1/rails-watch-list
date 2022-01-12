@@ -2,17 +2,19 @@ class ListsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @lists = List.all
+    @lists = policy_scope(List)
   end
 
   def show
-    @list = List.find(params[:id])
+    # @list = List.find(params[:id])
+    @list = policy_scope(List)
     @movies = @list.movies
     @bookmarks = @list.bookmarks
   end
 
   def new
     @list = List.new
+    authorize @list
   end
 
   def create
